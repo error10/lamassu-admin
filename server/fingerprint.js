@@ -1,7 +1,7 @@
 var exec = require('child_process').exec;
 var fs = require('fs');
 
-var cert = '/root/lamassu-server.crt';
+var cert = process.env.LAMASSU_SERVER_TLS_CERT || '/root/lamassu-server.crt';
 
 var fingerprint = null;
 
